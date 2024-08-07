@@ -1,66 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pinbols.lv</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #000000;
-            color: #FFFFFF;
-            font-family: 'Press Start 2P', cursive;
-            text-align: center;
-            padding: 20px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #b538e4;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
         }
         .header {
-            margin: 20px 0;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
         }
         .header h1 {
-            color: #00FFFF;
+            color: #ff00ff;
+            font-size: 48px;
         }
-        .description {
-            margin: 20px 0;
+        .section {
+            padding: 20px;
+            text-align: center;
         }
-        .button {
-            display: inline-block;
-            padding: 15px 25px;
-            margin: 10px;
+        .section h2 {
+            font-size: 36px;
+        }
+        .section p {
             font-size: 18px;
-            cursor: pointer;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #b538e4;
+            color: #fff;
             text-decoration: none;
+            font-size: 18px;
             border-radius: 5px;
         }
-        .button-primary {
-            color: #000000;
-            background-color: #00FFFF;
+        .btn:hover {
+            background-color: #9a30bf;
         }
-        .button-secondary {
-            color: #000000;
-            background-color: #FF69B4;
+        .list {
+            text-align: left;
+            display: inline-block;
+            max-width: 800px;
         }
-        .highlight {
-            color: #39FF14;
-        }
-        .accent {
-            color: #FFFF00;
-        }
-        footer {
-            margin-top: 40px;
+        .list li {
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="#home">Sākums</a>
+        <a href="#store">Pirkt Pinball</a>
+        <a href="#arena">Pinball Arena</a>
+        <a href="#service">Serviss</a>
+        <a href="#events">Pasākumi</a>
+    </div>
     <div class="header">
-        <h1>Welcome to Arcade Fun!</h1>
+        <h1>PINBOLS.LV</h1>
     </div>
-    <div class="description">
-        <p>Relive the <span class="highlight">excitement</span> of classic arcade games! Play your favorites and discover new ones.</p>
+    <div class="section" id="what-is-pinball">
+        <h2>KAS IR PINBALL?</h2>
+        <p>Pinbols (pinball) ir jautra elektro-mehāniska spēle, kurā spēlētāji izmanto slēdžus (flipperus), lai vadītu metāla bumbiņu pa spēles laukumu, cenšoties noturēt to spēlē un gūt pēc iespējas vairāk punktu, kad tā trāpa dažādos mērķus un šķēršļus. Tā ir aizraujoša izklaide visai ģimenei, kuras saknes meklējamas 1930. gados, kad tika izstrādātas pirmās mehāniskās spēļu automāti.</p>
+        <img src="/img/pinball1.png" alt="Pinball Machine">
+        <a href="#pinball-history" class="btn">Pinball Vēsture</a>
     </div>
-    <a href="#" class="button button-primary">Start Playing</a>
-    <a href="#" class="button button-secondary">Learn More</a>
-    <footer>
-        <p class="accent">© 2024 Arcade Fun</p>
-    </footer>
+    <div class="section" id="how-to-play-pinball">
+        <h2>KĀ SPĒLĒT PINBALL?</h2>
+        <ul class="list">
+            <li>Spēlētājam izmantojot flipperus (lāpstiņas), jāmēģina noturēt bumba pēc iespējas ilgāk spēles laukumā.</li>
+            <li>Trāpot notādītajos mērķos jāiegūst pēc iespējas vairāk punkti.</li>
+            <li>Sekojot spēles uzdevumiem jāatklāj jauni līmeņi.</li>
+            <li>Visbeidzot jānokļūst "Wizard Mode", kas spēles maksimālais līmenis.</li>
+        </ul>
+        <img src="/img/player1.png" alt="Playing Pinball">
+        <a href="#learn-more" class="btn">Lasīt Vairāk</a>
+    </div>
 </body>
 </html>
