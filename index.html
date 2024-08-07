@@ -1,12 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="lv">
 <head>
-  <title>Pinbols.lv</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinbols.lv</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #b538e4;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+        .header {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+        }
+        .header h1 {
+            color: #ff00ff;
+            font-size: 48px;
+        }
+        .section {
+            padding: 20px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 36px;
+        }
+        .section p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #b538e4;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #9a30bf;
+        }
+        .list {
+            text-align: left;
+            display: inline-block;
+            max-width: 800px;
+        }
+        .list li {
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
-
-<h1>Pinbols.lv</h1>
-<p>Drīzumā</p>
-
+    <div class="navbar">
+        <a href="#home">Sākums</a>
+        <a href="#store">Veikals</a>
+        <a href="#arena">Pinball Arena</a>
+        <a href="#service">Serviss</a>
+        <a href="#events">Pasākumi</a>
+    </div>
+    <div class="header">
+        <h1>PINBOLS.LV</h1>
+    </div>
+    <div class="section" id="what-is-pinball">
+        <h2>KAS IR PINBALL?</h2>
+        <p>Pinbols (pinball) ir jautra elektro-mehāniska spēle, kurā spēlētāji izmanto slēdžus (flipperus), lai vadītu metāla bumbiņu pa spēles laukumu, cenšoties noturēt to spēlē un gūt pēc iespējas vairāk punktu, kad tā trāpa dažādos mērķus un šķēršļus. Tā ir aizraujoša izklaide visai ģimenei, kuras saknes meklējamas 1930. gados, kad tika izstrādātas pirmās mehāniskās spēļu automāti.</p>
+        <img src="https://your-image-url-here.com/pinball-machine.jpg" alt="Pinball Machine">
+        <a href="#pinball-history" class="btn">Pinball Vēsture</a>
+    </div>
+    <div class="section" id="how-to-play-pinball">
+        <h2>KĀ SPĒLĒT PINBALL?</h2>
+        <ul class="list">
+            <li>Spēlētājam izmantojot flipperus (lāpstiņas), jāmēģina noturēt bumba pēc iespējas ilgāk spēles laukumā.</li>
+            <li>Trāpot notādītajos mērķos jāiegūst pēc iespējas vairāk punkti.</li>
+            <li>Sekojot spēles uzdevumiem jāatklāj jauni līmeņi.</li>
+            <li>Visbeidzot jānokļūst "Wizard Mode", kas spēles maksimālais līmenis.</li>
+        </ul>
+        <img src="https://your-image-url-here.com/playing-pinball.jpg" alt="Playing Pinball">
+        <a href="#learn-more" class="btn">Lasīt Vairāk</a>
+    </div>
 </body>
 </html>
