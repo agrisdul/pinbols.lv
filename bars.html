@@ -51,6 +51,23 @@
             width: 50px;
             margin-bottom: 10px;
         }
+        .gallery {
+            margin: 40px auto;
+            max-width: 800px;
+        }
+        .gallery h2 {
+            color: #FF69B4;
+            margin-bottom: 20px;
+        }
+        .gallery-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+        }
+        .gallery-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
         .contact-form {
             background-color: #1E1E1E;
             padding: 20px;
@@ -132,6 +149,18 @@
                     <h3>Sociālo mediju uzmanība</h3>
                     <p>Pinbols ir iecienīts fotoattēlu koplietošanas veids sociālajos tīklos.</p>
                 </div>
+            </div>
+        </section>
+                <!-- Image Gallery Section -->
+        <section class="gallery">
+            <h2>Pinball in Action: Bars & Venues</h2>
+            <div class="gallery-images">
+                <img src="#" alt="Pinball machine in bar 1">
+                <img src="#" alt="Pinball machine in bar 2">
+                <img src="#" alt="Pinball machine in bar 3">
+                <img src="#" alt="Pinball machine in bar 4">
+                <img src="#" alt="Pinball machine in bar 5">
+                <img src="#" alt="Pinball machine in bar 6">
             </div>
         </section>
 
