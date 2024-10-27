@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinball for Bars & Venues</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #FF69B4;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #FFFFFF;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .main-title {
+            color: #FF00FF;
+            font-size: 2.5em;
+            margin: 20px 0;
+        }
+        .content {
+            text-align: left;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .benefit {
+            background-color: #1E1E1E;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 180px;
+        }
+        .benefit img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        .contact-form {
+            background-color: #1E1E1E;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            text-align: left;
+        }
+        .contact-form label {
+            display: block;
+            color: #FF69B4;
+            margin-bottom: 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+        .submit-button {
+            background-color: #FF69B4;
+            color: #000000;
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">SHOP</a>
+            <a href="#">PINBALL ARENA</a>
+            <a href="#">SERVICE</a>
+            <a href="#">EVENTS</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="main-title">Pinball for Bars & Venues</h1>
+
+        <section class="content">
+            <h2 style="color: #FFFFFF;">Why Add Pinball to Your Venue?</h2>
+            <p>As the only pinball distributor in the country, I’m offering an exclusive opportunity to boost your business with a brand new experience! Our 70/30 income split makes it easy for you to add fun and increase customer engagement. Here are the benefits:</p>
+
+            <div class="benefits">
+                <div class="benefit">
+                    <img src="https://img.icons8.com/ios-filled/50/FF69B4/money-bag.png" alt="Extra Revenue">
+                    <h3>Extra Revenue</h3>
+                    <p>Earn extra income without any upfront costs.</p>
+                </div>
+                <div class="benefit">
+                    <img src="https://img.icons8.com/ios-filled/50/FF69B4/beer.png" alt="Customer Engagement">
+                    <h3>Customer Engagement</h3>
+                    <p>Pinball keeps customers entertained, encouraging longer stays.</p>
+                </div>
+                <div class="benefit">
+                    <img src="https://img.icons8.com/ios-filled/50/FF69B4/clock.png" alt="Low Maintenance">
+                    <h3>Low Maintenance</h3>
+                    <p>We handle all machine maintenance so you don’t have to.</p>
+                </div>
+                <div class="benefit">
+                    <img src="https://img.icons8.com/ios-filled/50/FF69B4/gift.png" alt="Unique Experience">
+                    <h3>Unique Experience</h3>
+                    <p>Offer something unique that sets your venue apart.</p>
+                </div>
+                <div class="benefit">
+                    <img src="https://img.icons8.com/ios-filled/50/FF69B4/graph.png" alt="Increased Foot Traffic">
+                    <h3>Increased Foot Traffic</h3>
+                    <p>Attract new customers interested in classic arcade fun.</p>
+                </div>
+                <div class="benefit">
+                    <img src="https://img.icons8.com/ios-filled/50/FF69B4/multiple-devices.png" alt="Social Media Buzz">
+                    <h3>Social Media Buzz</h3>
+                    <p>Pinball is a popular photo-op for social sharing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content contact-form">
+            <h2 style="color: #FF69B4;">Contact Me to Get Started</h2>
+            <form action="mailto:agris@dna.lv" method="post" enctype="text/plain">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
