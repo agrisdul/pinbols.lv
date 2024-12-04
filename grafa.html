@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafa Auto Logistics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #004d99;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background-color: #e6f7ff;
+        }
+        .hero h1 {
+            color: #004d99;
+        }
+        .services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        .service {
+            background-color: #e6ffe6;
+            border: 1px solid #99cc99;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+        }
+        .service h3 {
+            color: #006600;
+        }
+        .contact-form {
+            padding: 20px;
+            background-color: #d9f2d9;
+        }
+        .contact-form h2 {
+            text-align: center;
+            color: #006600;
+        }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #99cc99;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #006600;
+            color: white;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #004d99;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Grafa Auto Logistics</h1>
+        <p>Your reliable partner in transportation and storage solutions.</p>
+    </header>
+
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Fast, Reliable, and Secure Logistics</h1>
+        <p>Delivering across Latvia and Europe with precision.</p>
+    </div>
+
+    <section id="services" class="services">
+        <div class="service">
+            <h3>Domestic Logistics</h3>
+            <p>Nationwide cargo transportation with express delivery options.</p>
+        </div>
+        <div class="service">
+            <h3>Abroad Logistics</h3>
+            <p>Efficient and reliable cross-border cargo deliveries.</p>
+        </div>
+        <div class="service">
+            <h3>Storage Solutions</h3>
+            <p>Secure storage services tailored to your needs.</p>
+        </div>
+        <div class="service">
+            <h3>Custom Services</h3>
+            <p>Tailored logistics solutions to suit your business requirements.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Grafa Auto. All rights reserved.</p>
+        <p>Contact: +371 20808888 | Email: info@grafaauto.com</p>
+    </footer>
+</body>
+</html>
