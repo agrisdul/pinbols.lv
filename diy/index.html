@@ -1,52 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documented Tutorial</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Apmācība ar slaidrādi un satura rādītāju</title>
+    <style>
+        /* Vispārīgais stils */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 10px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style: disc inside;
+            margin: 10px 0;
+        }
+
+        /* Satura rādītāja stils */
+        nav {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        nav h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 5px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        /* Slaidrādes stils */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            font-size: 18px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .back-to-top {
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .back-to-top:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>My Tutorial Title</h1>
-        <p>A brief introduction to the tutorial.</p>
+    <!-- Galvene -->
+    <header id="top">
+        <h1>Mācību materiāls: HTML pamati</h1>
+        <p>Izpēti soļus, lai izveidotu HTML dokumentu ar stilīgu dizainu.</p>
     </header>
     
+    <!-- Satura Rādītājs -->
+    <nav>
+        <h2>Satura rādītājs</h2>
+        <ul>
+            <li><a href="#step1">1. solis: HTML pamati</a></li>
+            <li><a href="#step2">2. solis: Stila pievienošana</a></li>
+            <li><a href="#step3">3. solis: Slaidrādes veidošana</a></li>
+        </ul>
+    </nav>
+
+    <!-- Galvenais saturs -->
     <main>
-        <!-- Section 1 -->
-        <section>
-            <h2>Step 1: Understanding the Basics</h2>
-            <p>Explain the step in detail.</p>
+        <section id="step1">
+            <h2>1. solis: HTML pamati</h2>
+            <p>Šeit tu uzzināsi, kā uzbūvēt HTML struktūru.</p>
             <ul>
-                <li>Key point 1</li>
-                <li>Key point 2</li>
-                <li>Key point 3</li>
+                <li>Izmanto semantiskās tagus, piemēram, <code>&lt;header&gt;</code> un <code>&lt;main&gt;</code>.</li>
+                <li>Pievieno alt tekstu attēliem.</li>
+                <li>Atceries par strukturētu izkārtojumu.</li>
             </ul>
+            <a class="back-to-top" href="#top">Atpakaļ uz sākumu</a>
         </section>
 
-        <!-- Slideshow for Images -->
-        <section>
-            <h2>Step 2: Visual Demonstration</h2>
-<div class="slideshow-container">
-    <div class="slide">
-        <img src="1.jpg" alt="Image 1">
-        <p class="caption">Caption for Image 1</p>
-    </div>
-    <div class="slide">
-        <img src="2.jpg" alt="Image 2">
-        <p class="caption">Caption for Image 2</p>
-    </div>
-    <button onclick="previousSlide()">❮</button>
-    <button onclick="nextSlide()">❯</button>
-</div>
+        <section id="step2">
+            <h2>2. solis: Stila pievienošana</h2>
+            <p>CSS piešķir dokumentam dizainu un vizuālu organizāciju.</p>
+            <ul>
+                <li>Pievieno ārējo CSS failu vai izmanto iekšējo <code>&lt;style&gt;</code> tagu.</li>
+                <li>Izmanto selektorus, lai stilizētu dažādus elementus.</li>
+                <li>Piemēram, definē teksta krāsas, izmērus un izkārtojumu.</li>
+            </ul>
+            <a class="back-to-top" href="#top">Atpakaļ uz sākumu</a>
+        </section>
 
+        <section id="step3">
+            <h2>3. solis: Slaidrādes veidošana</h2>
+            <div class="slideshow-container">
+                <div class="slide">
+                    <img src="https://via.placeholder.com/800x400?text=Attēls+1" alt="Attēls 1">
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/800x400?text=Attēls+2" alt="Attēls 2">
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/800x400?text=Attēls+3" alt="Attēls 3">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            <script>
+                let slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    const slides = document.querySelectorAll('.slide');
+                    slides.forEach(slide => slide.style.display = 'none');
+                    slideIndex = (slideIndex + 1) % slides.length;
+                    slides[slideIndex].style.display = 'block';
+                    setTimeout(showSlides, 3000); // Mainīt ik pēc 3 sekundēm
+                }
+
+                function changeSlide(n) {
+                    slideIndex += n - 1;
+                    showSlides();
+                }
+            </script>
+            <a class="back-to-top" href="#top">Atpakaļ uz sākumu</a>
         </section>
     </main>
-    
+
+    <!-- Kājene -->
     <footer>
-        <p>&copy; 2024 Your Name</p>
+        <p>&copy; 2024 Tava Vārds</p>
     </footer>
-    
-    <script src="scripts.js"></script>
 </body>
 </html>
