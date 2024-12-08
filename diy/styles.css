@@ -48,3 +48,10 @@ ul {
     color: #555;
     margin-top: 5px;
 }
+
+@media (max-width: 768px) {
+    .slideshow-container {
+        max-width: 100%;
+    }
+}
+
