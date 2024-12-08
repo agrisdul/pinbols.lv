@@ -1,0 +1,50 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 10px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+ul {
+    list-style: disc inside;
+    margin: 10px 0;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
