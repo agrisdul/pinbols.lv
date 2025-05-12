@@ -1,150 +1,116 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
-<!-- Primary Meta Tags -->
-<title>pinbols.lv - Iepazīsti pinball. Pinball ir iemaņu spēle.</title>
-<meta name="title" content="pinbols.lv - Iepazīsti pinball. Pinball ir iemaņu spēle." />
-<meta name="description" content="Pinball (pinbols) ir jautra elektro-mehāniska spēle, kurā spēlētājam jāiegūst pēc iespējas vairāk punkti. Gan retro gan modernas spēles." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pinball Arena - Live Stream</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://pinbols.lv/" />
-<meta property="og:title" content="Pinball Arena - Nāc spēlēt. Pasākumi, izklaidei draugiem un ģimenei. " />
-<meta property="og:description" content="Pinball (pinbols) ir jautra elektro-mehāniska spēle, kurā spēlētājam jāiegūst pēc iespējas vairāk punkti. Gan retro gan modernas spēles." />
-<meta property="og:image" content="/img/pinball-arena.png" />
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://pinbols.lv/" />
-<meta property="twitter:title" content="Pinball Arena - Nāc spēlēt. Pasākumi, izklaidei draugiem un ģimenei. " />
-<meta property="twitter:description" content="Pinball (pinbols) ir jautra elektro-mehāniska spēle, kurā spēlētājam jāiegūst pēc iespējas vairāk punkti. Gan retro gan modernas spēles." />
-<meta property="twitter:image" content="/img/pinball-arena.png" />
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #ffcc00;
+    }
 
-<!-- Meta Tags Generated with https://metatags.io -->
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #000;
-        }
-        .navbar {
-            display: flex;
-            justify-content: center;
-            background-color: #b538e4;
-            padding: 10px 0;
-        }
-        .navbar a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            font-weight: bold;
-        }
-        .header {
-            text-align: center;
-            background-color: #fff;
-            padding: 20px;
-        }
-        .header h1 {
-            color: #ff00ff;
-            font-size: 48px;
-        }
-        .section {
-            padding: 20px;
-            text-align: center;
-        }
-        .section h2 {
-            font-size: 36px;
-        }
-        .section p {
-            font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .section img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #b538e4;
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-        }
-        .btn:hover {
-            background-color: #9a30bf;
-        }
-        .list {
-            text-align: left;
-            display: inline-block;
-            max-width: 800px;
-        }
-        .list li {
-            margin: 10px 0;
-        }
-        footer {
-            margin-top: 40px;
-            padding: 20px 0;
-            background-color: #000000;
-            color: #FF00FF;
-            font-size: 0.9em;
-        }
+    p {
+      font-size: 1.2rem;
+      color: #dddddd;
+    }
 
-        footer p {
-            margin: 5px 0;
-        }
-    </style>
+    .video-container {
+      width: 100%;
+      max-width: 960px;
+      aspect-ratio: 16 / 9;
+      margin: 20px 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .links a {
+      background-color: #1a1a1a;
+      color: #ffcc00;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .links a:hover {
+      background-color: #333333;
+    }
+
+    .instagram-embed {
+      width: 100%;
+      max-width: 960px;
+      margin-top: 40px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #888;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="/index.html">Sākums</a>
-        <a href="/pirkt.html">Pirkt Pinball</a>
-        <a href="#arena">Pinball Arena</a>
-        <a href="/serviss.html">Serviss</a>
-        <a href="/pamati.html">Pinball Pamati</a>
-        <a href="/pasakumi.html">Pasākumi</a>
-        <a href="/diy.html">Uzbūvē VPinball</a>
-    </div>
-    <div class="header">
-        <h1>pinbols.lv</h1>
-    </div>
-        <div class="section" id="what-is-pinball">
-        <h2>Live Stream</h2>
-        <p>Mūsu mērķis ir popularizēt Pinbolu un palīdzēt citiem apgūt šo spēli. Ienāc, uzdod dažus jautājumus un kļūsti labāks spēlētājs!</p>
-        <iframe src="https://player.twitch.tv/?channel=pinbols&parent=pinbols.lv" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
-        <br><a href="https://www.youtube.com/@Pinbols" target="_blank" class="btn">Skaties Youtube</a><a href="https://www.twitch.tv/pinbols" target="_blank" class="btn">Skaties Twitch</a>
-    </div>
-    <div class="section" id="what-is-pinball">
-        <h2>KAS IR PINBALL?</h2>
-        <p>Pinbols (Pinball) ir jautra elektro-mehāniska spēle, kurā spēlētāji izmanto fliperus (flipper, jeb lāpstiņas), lai vadītu metāla bumbiņu pa spēles laukumu, cenšoties noturēt to spēlē un gūt pēc iespējas vairāk punktu, kad tā trāpa dažādos mērķus un šķēršļus. Tā ir aizraujoša izklaide visai ģimenei, kuras saknes meklējamas 1930. gados, kad tika izstrādāti pirmie mehāniskie spēļu automāti.</p>
-        <img src="/img/vesture.svg" alt="Pinball Machine">
-        <a href="#pinball-history" class="btn">Pinball Vēsture</a>
-    </div>
-    <div class="section" id="how-to-play-pinball">
-        <h2>KĀ SPĒLĒT PINBALL?</h2>
-        <ul class="list">
-            <li>Spēlētājam izmantojot flipperus (lāpstiņas), jāmēģina noturēt bumba pēc iespējas ilgāk spēles laukumā.</li>
-            <li>Trāpot notādītajos mērķos jāiegūst pēc iespējas vairāk punkti.</li>
-            <li>Sekojot spēles uzdevumiem jāatklāj jauni līmeņi.</li>
-            <li>Visbeidzot jānokļūst "Wizard Mode", kas spēles maksimālais līmenis.</li>
-        </ul>
-        <img src="/img/player1.png" alt="Playing Pinball">
-        <a href="#learn-more" class="btn">Lasīt Vairāk</a>
-    </div>
-<footer>
-    <p>PINBOLS.LV 2024.</p>
-    <p>✉️ Kontakti: <a href="mailto:a@pinbols.lv" style="color: #FF69B4; text-decoration: none;">a @ pinbols.lv</a></p>
-    <p>Youtube: <a href="https://www.youtube.com/@Pinbols" style="color: #FF69B4; text-decoration: none;">Youtube/ Pinbols</a></p>
-    <p>Twitch: <a href="https://www.twitch.tv/pinbols" style="color: #FF69B4; text-decoration: none;">Twitch/ Pinbols</a></p>
-</footer>
+  <header>
+    <h1>🎮 Pinball Arena</h1>
+    <p>Watch our live stream and explore our world of pinball.</p>
+  </header>
+
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/live_stream?channel=UCs1piq-SIInYzWzRjz6MTTw&autoplay=1"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="links">
+    <a href="https://pinballarena.lv/" target="_blank">🛒 Visit Our Shop</a>
+    <a href="http://pinballarena.lv/store" target="_blank">📘 View Machine Catalog</a>
+    <a href="https://pinballarena.lv/events" target="_blank">📅 Upcoming Events</a>
+    <a href="https://www.instagram.com/pinballarenalv" target="_blank">📸 Instagram</a>
+    <a href="https://www.facebook.com/pinballarena" target="_blank">📘 Facebook</a>
+    <a href="https://www.youtube.com/@pinballarena" target="_blank">▶️ YouTube</a>
+  </div>
+
+  <div class="instagram-embed">
+    <!-- Replace this SnapWidget embed URL with your own -->
+    <iframe src="https://snapwidget.com/embed/123456" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height:500px"></iframe>
+  </div>
+
+  <footer>
+    © 2025 Pinball Arena — Tournaments, streams & the best pinball in the Baltics!
+  </footer>
 </body>
 </html>
