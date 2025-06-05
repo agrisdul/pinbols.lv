@@ -133,6 +133,32 @@
       color: #888;
       text-align: center;
     }
+    .banner-container {
+  width: 550px;
+  height: 100px;
+  margin: 0 auto 20px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #ffcc00aa;
+}
+
+.banner {
+  position: absolute;
+  width: 550px;
+  height: 100px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.banner.active {
+  opacity: 1;
+}
+
   </style>
 </head>
 <body>
@@ -141,6 +167,13 @@
     <h1>🎮 Pinball Arena Live</h1>
     <p>Watch our live stream and explore our world of pinball.</p>
   </header>
+
+  <!-- Banner container -->
+<div class="banner-container">
+  <img src="https://via.placeholder.com/550x100?text=Banner+1" class="banner active" alt="Banner 1" />
+  <img src="https://via.placeholder.com/550x100?text=Banner+2" class="banner" alt="Banner 2" />
+  <img src="https://via.placeholder.com/550x100?text=Banner+3" class="banner" alt="Banner 3" />
+</div>
 
   <div class="video-container">
     <iframe 
@@ -231,6 +264,18 @@
   <footer>
     © 2025 Pinball Arena — Tournaments, streams & the best pinball in the Baltics!
   </footer>
+
+  <script>
+  const banners = document.querySelectorAll('.banner');
+  let current = 0;
+  setInterval(() => {
+    banners[current].classList.remove('active');
+    current = (current + 1) % banners.length;
+    banners[current].classList.add('active');
+  }, 4000);
+</script>
+
+  
 </body>
 </html>
 
