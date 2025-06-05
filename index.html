@@ -59,6 +59,46 @@
       border: none;
     }
 
+    .logo-rows {
+      width: 100%;
+      max-width: 960px;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .logo-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo-box {
+      background: #222;
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      box-shadow: 0 0 8px #ffcc00aa;
+      transition: transform 0.3s;
+    }
+
+    .logo-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ffcc00;
+    }
+
+    .logo-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
     .links {
       display: flex;
       flex-wrap: wrap;
@@ -110,6 +150,70 @@
     </iframe>
   </div>
 
+  <!-- Logo rows after video -->
+  <div class="logo-rows">
+    <!-- Row 1 -->
+    <div class="logo-row">
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+1" alt="Logo 1"/>
+      </div>
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+2" alt="Logo 2"/>
+      </div>
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+3" alt="Logo 3"/>
+      </div>
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+4" alt="Logo 4"/>
+      </div>
+    </div>
+    <!-- Row 2 -->
+    <div class="logo-row">
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+5" alt="Logo 5"/>
+      </div>
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+6" alt="Logo 6"/>
+      </div>
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+7" alt="Logo 7"/>
+      </div>
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+8" alt="Logo 8"/>
+      </div>
+    </div>
+    <!-- Row 3 -->
+    <div class="logo-row">
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+9" alt="Logo 9"/>
+      </div>
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+10" alt="Logo 10"/>
+      </div>
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+11" alt="Logo 11"/>
+      </div>
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+12" alt="Logo 12"/>
+      </div>
+    </div>
+    <!-- Row 4 -->
+    <div class="logo-row">
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+13" alt="Logo 13"/>
+      </div>
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+14" alt="Logo 14"/>
+      </div>
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+15" alt="Logo 15"/>
+      </div>
+      <div class="logo-box">
+        <img src="https://via.placeholder.com/100x100?text=Logo+16" alt="Logo 16"/>
+      </div>
+    </div>
+  </div>
+
   <div class="links">
     <a href="https://pinballarena.lv/" target="_blank">🛒 Visit Our Shop</a>
     <a href="http://pinballarena.lv/store" target="_blank">📘 View Machine Catalog</a>
@@ -129,3 +233,5 @@
   </footer>
 </body>
 </html>
+
+
