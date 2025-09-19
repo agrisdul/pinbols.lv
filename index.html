@@ -1,282 +1,324 @@
 <!DOCTYPE html>
-<html lang="lv">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pinbols.lv</title>
-  <meta name="description" content="Pinbols.lv brings you live pinball streams, tournaments, and a wide catalog of modern and classic pinball machines. Join our events and shop online!">
-  <meta name="keywords" content="pinball, pinball stream, pinball arena, pinball machines, tournaments, arcade, Riga, Latvia, events, shop">
-  <meta name="author" content="Pinbols.lv">
-
-  <!-- Open Graph for Social Sharing -->
-  <meta property="og:title" content="Pinbols.lv — Pinball Live Stream & Tournaments" />
-  <meta property="og:description" content="Watch our live pinball stream, browse pinball machines, join events, and shop online. Discover the pinball scene in Latvia!" />
-  <meta property="og:image" content="https://pinballarena.lv/images/preview.jpg" /> <!-- Replace with your preview image -->
-  <meta property="og:url" content="https://pinballarena.lv" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Style and other code remains the same -->
-
-  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pinball Hub — Find & Play Pinball</title>
+  <meta name="description" content="Discover pinball locations, rent machines for events, and join tournaments." />
+  <meta property="og:title" content="Pinball.lv — Find & Play Pinball" />
+  <meta property="og:description" content="Discover pinball locations, rent machines for events, and join tournaments." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.jpg" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0f0f0f;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
+    :root{
+      --bg: #0b0f1a;        /* page background */
+      --card: #121728;      /* card background */
+      --muted: #93a3b8;     /* secondary text */
+      --text: #e6ecff;      /* primary text */
+      --brand: #0ea5e9;     /* accent */
+      --brand-2: #22d3ee;   /* accent 2 */
+      --ring: rgba(34,211,238,.35);
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(2,8,23,.35);
     }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,'Noto Sans',sans-serif;line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;display:block;border-radius:12px}
+    .container{width:min(1100px,92vw);margin-inline:auto}
 
-    header {
-      text-align: center;
-      margin-bottom: 30px;
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(11,15,26,.95),rgba(11,15,26,.8));backdrop-filter: blur(8px);border-bottom:1px solid rgba(148,163,184,.1)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand .logo{width:40px;height:40px;border-radius:10px;background:radial-gradient(120px 80px at 20% 20%, #22d3ee, transparent 60%), radial-gradient(120px 80px at 80% 70%, #0ea5e9, transparent 60%), #0b1220;border:1px solid rgba(148,163,184,.2)}
+    .brand h1{font-size:18px;letter-spacing:.4px;margin:0}
+    .menu{display:flex;gap:20px}
+    .menu a{color:var(--text);opacity:.9;font-weight:600}
+    .menu a:hover{opacity:1}
+    .mobile-menu-btn{display:none;background:transparent;border:0;color:var(--text);font-size:26px}
+    @media (max-width:820px){
+      .menu{display:none}
+      .mobile-menu-btn{display:block}
     }
+    .mobile-drawer{display:none;position:fixed;inset:60px 0 auto 0;background:rgba(11,15,26,.98);border-top:1px solid rgba(148,163,184,.1);padding:16px}
+    .mobile-drawer a{display:block;padding:12px 8px;color:var(--text);font-weight:600;border-radius:10px}
+    .mobile-drawer a:hover{background:rgba(148,163,184,.08)}
 
-    h1 {
-      font-size: 2.5rem;
-      margin: 0;
-      color: #ffcc00;
-    }
+    /* Hero */
+    .hero{position:relative;padding:64px 0 28px;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:-10% -20% auto -20%;height:420px;background:radial-gradient(600px 220px at 50% -40px, rgba(34,211,238,.25), transparent 50%), radial-gradient(600px 220px at 40% -60px, rgba(14,165,233,.35), transparent 50%);filter:blur(24px);opacity:.9}
+    .hero-inner{display:grid;grid-template-columns:1.25fr .9fr;gap:36px;align-items:center}
+    @media (max-width:980px){.hero-inner{grid-template-columns:1fr}}
+    .title{font-size:clamp(30px,5vw,44px);line-height:1.1;margin:0 0 10px;font-weight:800}
+    .subtitle{font-size:clamp(16px,2.6vw,18px);color:var(--muted);margin:0 0 22px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));border:0;color:#00131b;padding:12px 16px;border-radius:12px;font-weight:800;box-shadow:0 10px 24px rgba(14,165,233,.25);cursor:pointer}
+    .btn.secondary{background:transparent;border:1px solid rgba(148,163,184,.2);color:var(--text)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+    .stat{background:var(--card);border-radius:14px;padding:14px;border:1px solid rgba(148,163,184,.15);text-align:center}
+    .stat .big{display:block;font-size:26px;font-weight:800}
 
-    p {
-      font-size: 1.2rem;
-      color: #dddddd;
-    }
+    /* Sections */
+    section{padding:36px 0}
+    h2{font-size:28px;margin:0 0 18px}
+    .grid{display:grid;gap:16px}
+    .grid.cards{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:980px){.grid.cards{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:720px){.grid.cards{grid-template-columns:1fr}}
 
-    .video-container {
-      width: 100%;
-      max-width: 960px;
-      aspect-ratio: 16 / 9;
-      margin: 20px 0;
-    }
+    .card{background:var(--card);border-radius:var(--radius);border:1px solid rgba(148,163,184,.15);box-shadow:var(--shadow);overflow:hidden}
+    .card .body{padding:14px}
+    .tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;border:1px solid rgba(148,163,184,.25);opacity:.9}
 
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+    /* Map */
+    .map-wrap{background:var(--card);padding:12px;border-radius:var(--radius);border:1px solid rgba(148,163,184,.15)}
+    .map{width:100%;height:420px;border:0;border-radius:12px;filter:saturate(1.1) contrast(1.05)}
 
-    .logo-rows {
-      width: 100%;
-      max-width: 960px;
-      margin: 20px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
+    /* FAQ */
+    .faq{display:grid;gap:10px}
+    details{background:var(--card);border:1px solid rgba(148,163,184,.15);padding:14px;border-radius:12px}
+    summary{cursor:pointer;font-weight:700}
+    details[open]{outline:2px solid var(--ring)}
 
-    .logo-row {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+    /* Contact */
+    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+    @media(max-width:900px){.contact{grid-template-columns:1fr}}
+    input, textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(148,163,184,.25);background:#0f1424;color:var(--text)}
+    textarea{min-height:120px}
+    form .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    form .row + .row{margin-top:10px}
 
-    .logo-box {
-      background: #222;
-      width: 120px;
-      height: 120px;
-      border-radius: 12px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      box-shadow: 0 0 8px #ffcc00aa;
-      transition: transform 0.3s;
-    }
-
-    .logo-box:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #ffcc00;
-    }
-
-    .logo-box img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin: 20px 0;
-    }
-
-    .links a {
-      background-color: #1a1a1a;
-      color: #ffcc00;
-      padding: 10px 16px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .links a:hover {
-      background-color: #333333;
-    }
-
-    .instagram-embed {
-      width: 100%;
-      max-width: 960px;
-      margin-top: 40px;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #888;
-      text-align: center;
-    }
-    .banner-container {
-  width: 550px;
-  height: 100px;
-  margin: 0 auto 20px auto;
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 0 10px #ffcc00aa;
-}
-
-.banner {
-  position: absolute;
-  width: 550px;
-  height: 100px;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.banner.active {
-  opacity: 1;
-}
-
+    /* Footer */
+    footer{padding:24px 0 44px;border-top:1px solid rgba(148,163,184,.12);color:var(--muted)}
+    .social{display:flex;gap:12px;flex-wrap:wrap}
+    .social a{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(148,163,184,.25);border-radius:10px}
   </style>
+  <script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('mobileMenuBtn');
+      const drawer = document.getElementById('mobileDrawer');
+      btn?.addEventListener('click', () => {
+        drawer.style.display = drawer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
 </head>
 <body>
+  <!-- Header -->
   <header>
-<img src="https://images.squarespace-cdn.com/content/v1/678e39443b804b49d1698466/23288abe-a59e-4db0-88d4-508ed2817800/logo-bez-fona.png?format=1500w" alt="Pinball Arena LV Logo" style="max-width: 200px; height: auto;">
-    <h1>🎮 Pinbols.lv</h1>
-    <p>Watch our live stream and explore our world of pinball. by PinballArena</p>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>Pinball Hub</h1>
+      </div>
+      <nav class="menu" aria-label="Primary">
+        <a href="#machines">Machines</a>
+        <a href="#map">Where to Play</a>
+        <a href="#rent">Rentals</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu">☰</button>
+    </div>
+    <div id="mobileDrawer" class="mobile-drawer">
+      <a href="#machines" onclick="this.closest('.mobile-drawer').style.display='none'">Machines</a>
+      <a href="#map" onclick="this.closest('.mobile-drawer').style.display='none'">Where to Play</a>
+      <a href="#rent" onclick="this.closest('.mobile-drawer').style.display='none'">Rentals</a>
+      <a href="#faq" onclick="this.closest('.mobile-drawer').style.display='none'">FAQ</a>
+      <a href="#contact" onclick="this.closest('.mobile-drawer').style.display='none'">Contact</a>
+    </div>
   </header>
 
-  <!-- Banner container -->
-<div class="banner-container">
-  <img src="/img/118-IFPA-Banner_Venom_050124.jpg" class="banner active" alt="Banner 1" />
-  <img src="/img/92-IFPA Banner_Godzilla.png" class="banner" alt="Banner 2" />
-  <img src="img/55-GOTG.png" class="banner" alt="Banner 3" />
-</div>
-
-  <div class="video-container">
-    <iframe 
-      src="https://www.youtube.com/embed/live_stream?channel=UCs1piq-SIInYzWzRjz6MTTw&autoplay=1"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <!-- Logo rows after video -->
-  <div class="logo-rows">
-    <!-- Row 1 -->
-    <div class="logo-row">
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+1" alt="Logo 1"/>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <p class="tag">Community • Tournaments • Events</p>
+        <h2 class="title">19 venues • 28 pinball machines — and counting</h2>
+        <p class="subtitle">We help people find working pinball machines, host pop‑up tournaments, and bring beautiful games to festivals and private events.</p>
+        <div class="cta">
+          <a class="btn" href="#map">Find a place to play</a>
+          <a class="btn secondary" href="#rent">Rent a machine</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><span class="big">19</span>Locations</div>
+          <div class="stat"><span class="big">28</span>Machines</div>
+          <div class="stat"><span class="big">12+</span>Events / year</div>
+        </div>
       </div>
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+2" alt="Logo 2"/>
-      </div>
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+3" alt="Logo 3"/>
-      </div>
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+4" alt="Logo 4"/>
+      <div class="card" aria-label="Featured images" style="overflow:hidden">
+        <img src="https://images.unsplash.com/photo-1574359411659-2aee08dfe4c5?q=80&w=1400&auto=format&fit=crop" alt="Pinball playfield closeup"/>
       </div>
     </div>
-    <!-- Row 2 -->
-    <div class="logo-row">
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+5" alt="Logo 5"/>
-      </div>
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+6" alt="Logo 6"/>
-      </div>
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+7" alt="Logo 7"/>
-      </div>
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+8" alt="Logo 8"/>
-      </div>
-    </div>
-    <!-- Row 3 -->
-    <div class="logo-row">
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+9" alt="Logo 9"/>
-      </div>
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+10" alt="Logo 10"/>
-      </div>
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+11" alt="Logo 11"/>
-      </div>
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+12" alt="Logo 12"/>
-      </div>
-    </div>
-    <!-- Row 4 -->
-    <div class="logo-row">
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+13" alt="Logo 13"/>
-      </div>
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+14" alt="Logo 14"/>
-      </div>
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+15" alt="Logo 15"/>
-      </div>
-      <div class="logo-box">
-        <img src="https://via.placeholder.com/100x100?text=Logo+16" alt="Logo 16"/>
-      </div>
-    </div>
-  </div>
+  </section>
 
-  <div class="links">
-    <a href="https://pinballarena.lv/" target="_blank">🛒 Visit Our Shop</a>
-    <a href="http://pinballarena.lv/store" target="_blank">📘 View Machine Catalog</a>
-    <a href="https://www.pinballarena.lv/pinball-pasakumi" target="_blank">📅 Upcoming Events</a>
-    <a href="https://www.instagram.com/pinballarenalv" target="_blank">📸 Instagram</a>
-    <a href="https://www.facebook.com/pinballarena" target="_blank">📘 Facebook</a>
-    <a href="https://www.youtube.com/@pinballarena" target="_blank">▶️ YouTube</a>
-  </div>
+  <!-- Map -->
+  <section id="map" class="container">
+    <h2>Interactive map — where to play</h2>
+    <div class="map-wrap">
+      <!-- Replace the src below with your own Google or Yandex map link/list -->
+      <iframe class="map" loading="lazy" allowfullscreen
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d85236.77299457193!2d24.0372527!3d56.9496487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eed0c7200d6d1b%3A0x400cfcd68f2fe30!2sRiga!5e0!3m2!1sen!2slv!4v1700000000000"></iframe>
+    </div>
+  </section>
 
-  <div class="instagram-embed">
-    <!-- Replace this SnapWidget embed URL with your own -->
-    <iframe src="https://snapwidget.com/embed/1096098" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height:500px"></iframe>
-  </div>
+  <!-- Rentals / Available machines -->
+  <section id="rent" class="container">
+    <h2>Machines available for rental</h2>
+    <div class="grid cards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1578611985321-0b07fd8cb8e2?q=80&w=1400&auto=format&fit=crop" alt="Party Zone pinball" />
+        <div class="body">
+          <h3>Party Zone</h3>
+          <p class="muted">Bright, fast, early‑90s classic that always draws a crowd.</p>
+          <div class="cta"><a class="btn" href="#contact">Enquire</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1620287341055-29e5816bf98b?q=80&w=1400&auto=format&fit=crop" alt="Grand Prix pinball" />
+        <div class="body">
+          <h3>Grand Prix</h3>
+          <p class="muted">Approachable rules, quick games — great for beginners.</p>
+          <div class="cta"><a class="btn" href="#contact">Enquire</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1539371914693-35a46b7a53d6?q=80&w=1400&auto=format&fit=crop" alt="Elvis pinball" />
+        <div class="body">
+          <h3>Elvis</h3>
+          <p class="muted">Rock‑and‑roll themed crowd‑pleaser for parties and bars.</p>
+          <div class="cta"><a class="btn" href="#contact">Enquire</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Machines in venues -->
+  <section id="machines" class="container">
+    <h2>Pinball machines in venues</h2>
+    <p class="subtitle" style="margin-bottom:16px">Currently operating in local bars and entertainment spaces.</p>
+
+    <div class="grid cards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1596907773902-59e3dae7b81a?q=80&w=1400&auto=format&fit=crop" alt="Arcade room" />
+        <div class="body">
+          <strong>Arcade Zone — Main Street</strong>
+          <ul>
+            <li>Elvis</li>
+            <li>The Simpsons Pinball Party</li>
+            <li>Lord of the Rings</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1594317655234-e2fa8a40a615?q=80&w=1400&auto=format&fit=crop" alt="Bar with pinball" />
+        <div class="body">
+          <strong>The Pin Corner — Old Town</strong>
+          <ul>
+            <li>World Poker Tour</li>
+            <li>Police Force</li>
+            <li>Batman</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1584623004709-0c929e12c462?q=80&w=1400&auto=format&fit=crop" alt="Venue with neon lights" />
+        <div class="body">
+          <strong>Neon Bar — Riverside</strong>
+          <ul>
+            <li>Popeye</li>
+            <li>Harley‑Davidson (3rd ed.)</li>
+            <li>Party Zone</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="container">
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+      <details>
+        <summary>Are pinball machines still being manufactured?</summary>
+        <p>Yes. There’s been a strong resurgence, with multiple new titles released each year.</p>
+      </details>
+      <details>
+        <summary>Where are new machines made?</summary>
+        <p>Most major manufacturers are in the U.S., with others appearing worldwide.</p>
+      </details>
+      <details>
+        <summary>How much does a machine cost?</summary>
+        <p>Pricing varies widely by model and edition. As a rough guide, new “home” editions start lower, while premium and limited runs can cost significantly more.</p>
+      </details>
+      <details>
+        <summary>Where can I play?</summary>
+        <p>Check the interactive map above. We keep it as current as possible.</p>
+      </details>
+      <details>
+        <summary>Do you sell your machines?</summary>
+        <p>We focus on keeping them in public so more people can play. If you’re seeking a specific title, contact us and we’ll try to help.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container">
+    <h2>Contact us</h2>
+    <div class="contact">
+      <form onsubmit="event.preventDefault(); alert('Thanks! We\'ll get back to you shortly.');">
+        <div class="row">
+          <input required name="name" placeholder="Your name" />
+          <input required type="email" name="email" placeholder="Email" />
+        </div>
+        <div class="row">
+          <input name="subject" placeholder="Subject (optional)" />
+          <input name="phone" placeholder="Phone (optional)" />
+        </div>
+        <div class="row">
+          <textarea name="message" placeholder="Tell us about your event or question"></textarea>
+        </div>
+        <div style="margin-top:10px" class="cta"><button class="btn" type="submit">Send message</button></div>
+      </form>
+      <aside class="card" style="padding:14px">
+        <h3 style="margin-top:0">Quick info</h3>
+        <p><strong>Email:</strong> hello@example.com</p>
+        <p><strong>Phone:</strong> +371 0000 0000</p>
+        <p><strong>Social:</strong></p>
+        <div class="social">
+          <a href="#" aria-label="Telegram">🐾 Telegram</a>
+          <a href="#" aria-label="VK">🟦 VK</a>
+          <a href="#" aria-label="Instagram">📸 Instagram</a>
+          <a href="#" aria-label="YouTube">▶️ YouTube</a>
+        </div>
+      </aside>
+    </div>
+  </section>
 
   <footer>
-    © 2025 Pinball Arena — Tournaments, streams & the best pinball in the Baltics!
+    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>© <span id="year"></span> Pinball Hub</div>
+      <div>Made with ❤️ for the pinball community</div>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
   </footer>
 
-  <script>
-  const banners = document.querySelectorAll('.banner');
-  let current = 0;
-  setInterval(() => {
-    banners[current].classList.remove('active');
-    current = (current + 1) % banners.length;
-    banners[current].classList.add('active');
-  }, 4000);
-</script>
-
-  
+  <!-- Structured data (optional) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Pinball Hub",
+    "url": "https://example.com",
+    "sameAs": ["https://instagram.com/yourhandle","https://youtube.com/@yourhandle"],
+    "description": "Discover pinball locations, rent machines for events, and join tournaments.",
+    "logo": "https://example.com/logo.png"
+  }
+  </script>
 </body>
 </html>
-
-
